@@ -46,9 +46,10 @@ body{background:#FFFAF3;-webkit-font-smoothing:antialiased}
 .hero-book{width:clamp(180px,24vw,255px);height:auto;margin-bottom:28px;display:block}
 .ending{text-align:center;padding:48px 0;border-top:1px solid rgba(196,162,101,.2)}
 .ending h3{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;letter-spacing:4px;color:#7A5C8B;text-transform:uppercase;margin-bottom:16px}
-.ending p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#8B6F47;line-height:1.5;max-width:400px;margin:0 auto}
+.ending p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#C4694A;line-height:1.5;max-width:400px;margin:0 auto}
 .footer{text-align:center;padding:60px 24px;border-top:1px solid #E8DDD0}
 .footer div{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
+@media (max-width:600px){.footer-sep{display:none}.footer-tail{display:block;margin-top:8px}}
 .gate{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;background:linear-gradient(170deg,#FFFAF3 0%,#F5EBE0 40%,#EDE0D4 70%,#FFFAF3 100%);transition:opacity .6s ease}
 .gate.hidden{opacity:0;pointer-events:none}
 .gate-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;font-weight:600;letter-spacing:6px;color:#C4694A;text-transform:uppercase;margin-bottom:20px}
@@ -131,11 +132,11 @@ body{background:#FFFAF3;-webkit-font-smoothing:antialiased}
 
 <div class="ending">
   <h3>Fine</h3>
-  <p>A person doesn&rsquo;t outgrow the need for a new beginning.</p>
+  <p>&ldquo;A person doesn&rsquo;t outgrow the need for a new beginning.&rdquo;</p>
 </div>
 
 <div class="footer">
-  <div>The Camp Brand Inc. &middot; Brandon Camp &middot; Writer / Director / Producer &middot; UTA / TFC</div>
+  <div>The Camp Brand Inc. &middot; Brandon Camp &middot; Writer / Director / Producer<span class="footer-sep"> &middot; </span><span class="footer-tail">UTA / TFC</span></div>
 </div>
 
 <script>
@@ -174,7 +175,7 @@ const BEATS = [
 {act:3,icon:"🎬",text:"A knock at Claire’s hotel room. The actress-producer from Marcus’ bed.\n\nShe shows Claire a clip of footage from Marcus’s final day on set. A scene in which his character was saying goodbye to his estranged daughter. “I kept telling myself you’d be there when I was ready. How terribly convenient of me. That’s not how it works, is it? You don’t get to leave and expect the light to be on when you finally round back. I wasn’t your home, when you most needed one. And I won’t ever forgive myself for it.”\n\nUnscripted tears in his eyes. And the producer knew that every word was for…Claire.\n\nWho has another panic attack on the spot.\n\n“He’s already left for the airport,” the producer says. “But, I have an idea?”"},
 {act:3,icon:"🚁",text:"A second-unit stunt helicopter. The pilot is an Italian daredevil who has clearly been waiting his entire life for exactly this moment.\n\nBobbing over the Eternal City, Claire ralphs spectacularly all over herself.\n\nShe lands at the aeroporto looking hell-and-backed and smelling even worse. She races to Marcus on the runway, just stepping into his PJ. He sees her. He smells her.\n\nAnd he kisses her like he’s never kissed anyone his entire life."},
 {act:3,icon:"💋",text:"Back at the hotel, but her room this time. They spend the night together. Tender, funny, ridiculous, honest. Thirty years of armor finally shed.\n\nHe wakes up the next morning, expecting a second round with coffee, but...she’s gone. A note on the pillow –\n\n“Come find me if you meant it.”\n\nTurns out Monica got a desperate call in the wee hours from a monastery in Greece. Marcus smiles – sounds like sequel material."},
-{act:3,icon:"🇮🇹",art:{src:"statue.png",side:"right"},text:"The convent.\n\nThe line is out the door. Carmela dusted in flour, handing maritozzi to a queue that stretches long past the piazza. Felicity behind her with an iPad. Thérèse posting to TikTok.\n\nClaire hugs them all goodbye. Carmela presses a warm pastry into her hands and whispers, “Per il viaggio.” For the journey.\n\nClaire leaves in tears, walks out through the gate. She breathes in Rome one last time.\n\nArrivederci is not goodbye in Italian, it’s...until we see each other again."},
+{act:3,icon:"🇮🇹",art:{src:"statue.png",side:"right"},text:"The convent.\n\nThe line is out the door. Carmela dusted in flour, handing maritozzi to a queue that stretches long past the piazza. Felicity behind her with an iPad. Thérèse posting to TikTok.\n\nClaire hugs them all goodbye. Carmela presses a warm pastry into her hands and whispers, “Per il viaggio.” For the journey.\n\nClaire leaves in tears, walks out through the gate. She breathes in Rome one last time.\n\n§Arrivederci is not goodbye in Italian, it’s...until we see each other again.§"},
 ];
 
 // Build paragraph DOM with inline markers:
