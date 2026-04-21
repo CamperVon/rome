@@ -62,7 +62,8 @@ body{background:#FFFAF3;-webkit-font-smoothing:antialiased}
 .ending p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#C4694A;line-height:1.5;max-width:400px;margin:0 auto}
 .footer{text-align:center;padding:60px 24px;border-top:1px solid #E8DDD0}
 .footer div{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
-@media (max-width:600px){.footer-sep{display:none}.footer-tail{display:block;margin-top:8px}}
+.mobile-br{display:none}
+@media (max-width:600px){.footer-sep{display:none}.footer-tail{display:block;margin-top:8px}.mobile-br{display:inline}}
 .gate{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;background:linear-gradient(170deg,#FFFAF3 0%,#F5EBE0 40%,#EDE0D4 70%,#FFFAF3 100%);transition:opacity .6s ease}
 .gate.hidden{opacity:0;pointer-events:none}
 .gate-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;font-weight:600;letter-spacing:6px;color:#C4694A;text-transform:uppercase;margin-bottom:20px}
@@ -125,7 +126,7 @@ body{background:#FFFAF3;-webkit-font-smoothing:antialiased}
 <div class="hero">
   <div class="grain"></div>
   <img class="anim hero-book" src="art/book.png" alt="When in Rome by Liam Callanan" style="animation-delay:.15s">
-  <div class="anim hero-sub" style="animation-delay:.3s">Based on the novel by Liam Callanan</div>
+  <div class="anim hero-sub" style="animation-delay:.3s">Based on the novel <br class="mobile-br">by Liam Callanan</div>
   <h1 class="anim hero-title" style="animation-delay:.6s">When in Rome</h1>
   <div class="anim hero-line" style="animation-delay:.8s"></div>
   <p class="anim hero-logline" style="animation-delay:1s">A woman flies to Rome to sell a convent.<br>Three nuns, one crumbling building, and the British flirt she ran from thirty years ago have other plans...</p>
