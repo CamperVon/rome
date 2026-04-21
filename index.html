@@ -38,9 +38,64 @@ body{background:#FFFAF3;-webkit-font-smoothing:antialiased}
 .ending p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#8B6F47;line-height:1.5;max-width:400px;margin:0 auto}
 .footer{text-align:center;padding:60px 24px;border-top:1px solid #E8DDD0}
 .footer div{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
+.gate{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;background:linear-gradient(170deg,#FFFAF3 0%,#F5EBE0 40%,#EDE0D4 70%,#FFFAF3 100%);transition:opacity .6s ease}
+.gate.hidden{opacity:0;pointer-events:none}
+.gate-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;font-weight:600;letter-spacing:6px;color:#C4694A;text-transform:uppercase;margin-bottom:20px}
+.gate-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(40px,8vw,72px);font-weight:300;color:#1a1a1a;letter-spacing:-1px;line-height:1;margin:0 0 24px;text-align:center}
+.gate-line{width:60px;height:1px;background:#C4A265;margin:0 0 28px}
+.gate-form{display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;max-width:320px}
+.gate-input{width:100%;padding:14px 16px;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:4px;text-align:center;text-transform:uppercase;background:transparent;border:none;border-bottom:1px solid #C4A265;color:#1a1a1a;outline:none;transition:border-color .3s ease}
+.gate-input:focus{border-bottom-color:#C4694A}
+.gate-btn{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;letter-spacing:4px;color:#C4694A;text-transform:uppercase;background:transparent;border:1px solid #C4694A;padding:12px 32px;cursor:pointer;transition:all .3s ease}
+.gate-btn:hover{background:#C4694A;color:#FFFAF3}
+.gate-err{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:#C4694A;text-transform:uppercase;height:14px;opacity:0;transition:opacity .3s ease}
+.gate-err.show{opacity:1}
+.locked{overflow:hidden;height:100vh}
 </style>
 </head>
-<body>
+<body class="locked">
+
+<div class="gate" id="gate">
+  <div class="gate-sub">By Invitation</div>
+  <h1 class="gate-title">When in Rome</h1>
+  <div class="gate-line"></div>
+  <form class="gate-form" id="gateForm" autocomplete="off">
+    <input class="gate-input" id="gateInput" type="password" placeholder="Password" aria-label="Password" autofocus>
+    <div class="gate-err" id="gateErr">Not quite</div>
+    <button class="gate-btn" type="submit">Enter</button>
+  </form>
+</div>
+
+<script>
+(function(){
+  const KEY = "wir-unlocked";
+  const PW = "ITALIA";
+  const gate = document.getElementById("gate");
+  const form = document.getElementById("gateForm");
+  const input = document.getElementById("gateInput");
+  const err = document.getElementById("gateErr");
+
+  if (sessionStorage.getItem(KEY) === "1") {
+    gate.remove();
+    document.body.classList.remove("locked");
+    return;
+  }
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    if (input.value.trim().toUpperCase() === PW) {
+      sessionStorage.setItem(KEY, "1");
+      gate.classList.add("hidden");
+      document.body.classList.remove("locked");
+      setTimeout(() => gate.remove(), 700);
+    } else {
+      err.classList.add("show");
+      input.value = "";
+      input.focus();
+    }
+  });
+})();
+</script>
 
 <div class="hero">
   <div class="grain"></div>
