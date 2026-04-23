@@ -11,308 +11,219 @@
 <meta property="og:image" content="og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="When in Rome">
-<meta name="twitter:description" content="A woman flies to Rome to sell a convent. Three nuns, one crumbling building, and the British flirt she ran from thirty years ago have other plans...">
-<meta name="twitter:image" content="og-image.png">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script defer src="/_vercel/insights/script.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#FFFAF3;-webkit-font-smoothing:antialiased}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+body{-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px 24px 140px;position:relative;background:linear-gradient(170deg,#FFFAF3 0%,#F5EBE0 40%,#EDE0D4 70%,#FFFAF3 100%)}
-.grain{position:absolute;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
-.anim{opacity:0}
-.anim.show{animation:fadeUp 1s ease forwards}
-.hero-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;font-weight:600;letter-spacing:6px;color:#C4694A;text-transform:uppercase;margin-bottom:20px;text-align:center}
-.hero-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(48px,10vw,88px);font-weight:300;color:#C4694A;letter-spacing:-1px;line-height:1;margin:0 0 28px;text-align:center}
-.hero-line{width:60px;height:1px;background:#C4A265;margin:0 0 28px}
-.hero-logline{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(17px,2.5vw,21px);font-weight:400;color:#555;line-height:1.7;max-width:500px;text-align:center;margin:0 0 36px}
-.comps-label{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;letter-spacing:5px;color:#C4694A;text-transform:uppercase;margin-bottom:10px}
-.comps{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;letter-spacing:3px;color:#C4694A}
-.scroll-hint{position:absolute;bottom:40px;display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .5s ease}
-.scroll-hint span{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:4px;color:#C4694A;text-transform:uppercase}
-.scroll-hint div{width:1px;height:32px;background:linear-gradient(to bottom,#C4694A,transparent);animation:pulse 2s ease-in-out infinite}
-.content{max-width:580px;margin:0 auto;padding:40px 24px 80px}
-.act-header{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;letter-spacing:6px;text-transform:uppercase}
-.beat{margin-bottom:48px;opacity:.15;transform:translateY(8px);transition:all .7s cubic-bezier(.23,1,.32,1);position:relative}
-.beat-art{position:absolute;top:24px;width:190px;height:auto;pointer-events:none;opacity:0;transition:opacity 1.4s ease .1s}
-.beat-art.left{left:-230px}
-.beat-art.right{right:-230px}
-.beat.visible .beat-art{opacity:.9}
-@media (max-width:1200px){.beat-art{display:none}}
-.beat.visible{opacity:1;transform:translateY(0)}
-.beat-icon{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.beat-icon img{width:40px;height:40px;object-fit:contain;flex-shrink:0}
-.beat-icon div{height:1px;flex:1}
-.beat p{font-family:'Source Serif 4',Georgia,serif;font-size:17.5px;line-height:1.8;color:#3a3a3a;margin:0 0 16px}
-.beat p.quote{font-style:italic}
-.beat .accent{color:#C4694A}
-.beat .em{font-style:italic}
-.beat p.quote .em{font-style:normal}
-.end-icon{text-align:center;padding:24px 0 8px;opacity:.85}
-.end-icon img{width:64px;height:64px}
-.hero-book{width:clamp(180px,24vw,255px);height:auto;margin-bottom:28px;display:block}
-.ending{text-align:center;padding:48px 0;border-top:1px solid rgba(196,162,101,.2)}
-.ending h3{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;letter-spacing:4px;color:#7A5C8B;text-transform:uppercase;margin-bottom:16px}
-.ending p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#C4694A;line-height:1.5;max-width:400px;margin:0 auto}
-.footer{text-align:center;padding:60px 24px;border-top:1px solid #E8DDD0}
-.footer div{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
-.mobile-br{display:none}
-@media (max-width:600px){.footer-sep{display:none}.footer-tail{display:block;margin-top:8px}.mobile-br{display:inline}.hero-book{width:280px}.scroll-hint{display:none}}
-.gate{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;background:linear-gradient(170deg,#FFFAF3 0%,#F5EBE0 40%,#EDE0D4 70%,#FFFAF3 100%);transition:opacity .6s ease}
-.gate.hidden{opacity:0;pointer-events:none}
-.gate-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;font-weight:600;letter-spacing:6px;color:#C4694A;text-transform:uppercase;margin-bottom:20px}
-.gate-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(40px,8vw,72px);font-weight:300;color:#C4694A;letter-spacing:-1px;line-height:1;margin:0 0 24px;text-align:center}
-.gate-line{width:60px;height:1px;background:#C4A265;margin:0 0 28px}
-.gate-form{display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;max-width:320px}
-.gate-input{width:100%;padding:14px 16px;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:4px;text-align:center;text-transform:uppercase;background:transparent;border:none;border-bottom:1px solid #C4A265;color:#1a1a1a;outline:none;transition:border-color .3s ease}
-.gate-input:focus{border-bottom-color:#C4694A}
-.gate-btn{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;letter-spacing:4px;color:#C4694A;text-transform:uppercase;background:transparent;border:1px solid #C4694A;padding:12px 32px;cursor:pointer;transition:all .3s ease}
-.gate-btn:hover{background:#C4694A;color:#FFFAF3}
-.gate-err{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:#C4694A;text-transform:uppercase;height:14px;opacity:0;transition:opacity .3s ease}
-.gate-err.show{opacity:1}
-.locked{overflow:hidden;height:100vh}
+@keyframes floatSlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+body{background:linear-gradient(170deg,#FFFAF3 0%,#F5EBE0 40%,#EDE0D4 70%,#FFFAF3 100%);background-attachment:fixed;min-height:100vh}
+.peach{position:relative}
+.anim{opacity:0}.anim.show{animation:fadeUp .9s ease forwards}
+.s{padding:80px 24px;max-width:640px;margin:0 auto;position:relative}
+.sw{max-width:860px}
+.script{font-family:'Dancing Script',cursive;color:#C4392A;font-weight:700}
+.body{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.75;color:#3a3a3a}
+.label{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;letter-spacing:5px;color:#C4694A;text-transform:uppercase}
+.dot{text-align:center;padding:24px 0;color:#C4A265;font-size:18px;letter-spacing:12px}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:80px 24px 120px;text-align:center;position:relative}
+.hero-book{width:clamp(270px,38vw,405px);margin-bottom:32px;filter:drop-shadow(0 12px 40px rgba(0,0,0,.15));animation:floatSlow 6s ease-in-out infinite}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,11vw,96px);font-weight:300;color:#C4694A;letter-spacing:-1px;line-height:1;margin:0 0 24px}
+.hero .sub{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;letter-spacing:6px;color:#C4694A;text-transform:uppercase;margin-bottom:24px}
+.scroll-h{position:absolute;bottom:40px;display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .5s}
+.scroll-h span{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:4px;color:#C4694A;text-transform:uppercase}
+.scroll-h div{width:1px;height:32px;background:linear-gradient(to bottom,#C4694A,transparent);animation:pulse 2s ease-in-out infinite}
+.q{text-align:center;margin-bottom:32px}
+.q-t{font-family:'Dancing Script',cursive;font-size:clamp(24px,4vw,36px);color:#C4392A;font-weight:600;line-height:1.4}
+.q-s{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#C4694A;margin-top:4px}
+.g2{display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center}
+.g2 img{width:360px;height:auto;opacity:.9}
+@media(max-width:768px){.g2{grid-template-columns:1fr}.g2 img{margin:0 auto;display:block;width:300px}}
+.stat li{font-family:'Source Serif 4',serif;font-size:18px;color:#3a3a3a;margin-bottom:8px;font-style:italic;list-style:none}
+.ch-n{font-family:'Dancing Script',cursive;font-size:clamp(36px,6vw,52px);color:#C4392A;font-weight:700;margin-bottom:4px}
+.ch-grid{display:grid;grid-template-columns:1fr 250px;gap:36px;align-items:start}
+.ch-grid img{width:240px;height:auto;margin-top:32px}
+.ch-grid-flip{display:grid;grid-template-columns:250px 1fr;gap:36px;align-items:start}
+.ch-grid-flip img{width:240px;height:auto;margin-top:32px}
+@media(max-width:768px){.ch-grid,.ch-grid-flip{grid-template-columns:1fr}.ch-grid img,.ch-grid-flip img{margin:0 auto;display:block;width:200px;order:-1}}
+.nun-n{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;letter-spacing:3px;color:#8B1A1A;text-transform:uppercase;margin-bottom:6px}
+.nun-d{font-family:'Source Serif 4',serif;font-size:17px;line-height:1.7;color:#3a3a3a;margin-bottom:28px}
+.inline-q{text-align:center;padding:40px 24px;max-width:560px;margin:0 auto}
+.inline-q p{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,30px);font-style:italic;color:#C4694A;line-height:1.4}
+.cta{text-align:center;padding:80px 24px}
+.cta a{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:700;letter-spacing:5px;color:#C4694A;text-transform:uppercase;border:1.5px solid #C4694A;padding:18px 48px;text-decoration:none;transition:all .3s}
+.cta a:hover{background:#C4694A;color:#FFFAF3}
+.foot{text-align:center;padding:48px 24px;border-top:1px solid #E8DDD0}
+.foot div{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
+.foot a{color:#bbb;text-decoration:none}
+.script-head{margin-bottom:10px}
+.deco{position:absolute;pointer-events:none;opacity:.75}
+@media(max-width:900px){.deco{display:none}}
+@media(max-width:600px){.scroll-h{display:none}}
 </style>
 </head>
-<body class="locked">
+<body>
 
-<div class="gate" id="gate">
-  <div class="gate-sub">By Invitation</div>
-  <h1 class="gate-title">When in Rome</h1>
-  <div class="gate-line"></div>
-  <form class="gate-form" id="gateForm" autocomplete="off">
-    <input class="gate-input" id="gateInput" type="password" placeholder="Password" aria-label="Password" autofocus>
-    <div class="gate-err" id="gateErr">Not quite</div>
-    <button class="gate-btn" type="submit">Enter</button>
-  </form>
+<!-- HERO -->
+<div class="hero peach">  <img class="hero-book anim" src="art/book.png" alt="When in Rome by Liam Callanan" style="animation-delay:.2s">
+  <div class="anim sub" style="animation-delay:.5s">Based on the novel by Liam Callanan</div>
+  <h1 class="anim" style="animation-delay:.8s">When in Rome</h1>
+  <div class="scroll-h anim" id="sh" style="animation-delay:1.4s"><span>Scroll</span><div></div></div>
+  <img class="deco" src="art/teaser/bougainvillea.png" alt="" style="top:20px;right:20px;width:180px;transform:scaleX(-1)">
 </div>
 
-<script>
-(function(){
-  const KEY = "wir-unlocked";
-  const PW = "ITALIA";
-  const gate = document.getElementById("gate");
-  const form = document.getElementById("gateForm");
-  const input = document.getElementById("gateInput");
-  const err = document.getElementById("gateErr");
-
-  if (sessionStorage.getItem(KEY) === "1") {
-    gate.remove();
-    document.body.classList.remove("locked");
-    return;
-  }
-
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    if (input.value.trim().toUpperCase() === PW) {
-      sessionStorage.setItem(KEY, "1");
-      gate.classList.add("hidden");
-      document.body.classList.remove("locked");
-      setTimeout(() => gate.remove(), 700);
-    } else {
-      err.classList.add("show");
-      input.value = "";
-      input.focus();
-    }
-  });
-})();
-</script>
-
-<div class="hero">
-  <div class="grain"></div>
-  <img class="anim hero-book" src="art/book.png" alt="When in Rome by Liam Callanan" style="animation-delay:.15s">
-  <div class="anim hero-sub" style="animation-delay:.3s">Based on the novel <br class="mobile-br">by Liam Callanan</div>
-  <h1 class="anim hero-title" style="animation-delay:.6s">When in Rome</h1>
-  <div class="anim hero-line" style="animation-delay:.8s"></div>
-  <p class="anim hero-logline" style="animation-delay:1s">A woman flies to Rome to sell a convent.<br>Three nuns, one crumbling building, and the British flirt she ran from thirty years ago have other plans...</p>
-  <div class="anim" style="text-align:center;animation-delay:1.2s">
-    <div class="comps-label">Comps</div>
-    <div class="comps">Best Exotic Marigold Hotel &middot; Book Club &middot; It&rsquo;s Complicated &middot; Sister Act</div>
-  </div>
-  <div class="scroll-hint anim" id="scrollHint" style="animation-delay:1.6s">
-    <span>Scroll</span>
-    <div></div>
+<!-- REVIEWS -->
+<div class="peach">  <div class="s">
+    <div class="q"><div class="q-t">&ldquo;A delight!&rdquo;</div><div class="q-s">Publishers Weekly</div></div>
+    <div class="q"><div class="q-t">&ldquo;If Eat, Pray, Love was<br>organized in a different order.&rdquo;</div><div class="q-s">Booklist (Starred)</div></div>
+    <div class="q"><div class="q-t">&ldquo;A joyous depiction of self-discovery<br>in a vibrant Rome setting.&rdquo;</div><div class="q-s">Kirkus</div></div>
   </div>
 </div>
 
-<div class="content" id="content"></div>
+<!-- FILM + TAGLINE -->
+<div class="peach">
+  <div class="s sw">
+    <div class="g2">
+      <div>
+        <div class="script script-head" style="font-size:clamp(36px,6vw,52px)">The Film</div>
+        <p class="body" style="margin-bottom:20px">A 50 year-old real estate broker, raw from <em>life</em>, is sent to Rome to find a buyer for a crumbling convent. She becomes enamored with the Eternal City and makes newfound friends with three madcap nuns, vowing to save them from ruin.</p>
+        <p class="body" style="margin-bottom:28px">But when the fading movie star she walked away from thirty years ago suddenly shows up across the piazza, she realizes that hell is paved with good intentions...and that God has one sick sense of humor.</p>
+        <div class="label" style="margin-bottom:8px">Comps</div>
+        <div class="script" style="font-size:clamp(18px,3vw,24px);line-height:1.4">Best Exotic Marigold Hotel &middot; Book Club &middot;<br>It&rsquo;s Complicated &middot; Notting Hill &middot; Sister Act</div>
+      </div>
+      <div><img src="art/teaser/courtyard.png" alt="" loading="lazy"></div>
+    </div>
+  </div>
 
-<div class="end-icon"><img src="end-icon.svg" alt=""></div>
-
-<div class="ending">
-  <h3>Fine</h3>
-  <p>&ldquo;A person doesn&rsquo;t outgrow the need for a new beginning.&rdquo;</p>
+  <div style="text-align:center;padding:48px 24px 16px;max-width:760px;margin:0 auto">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:49px;color:#C4694A;margin-bottom:16px;letter-spacing:8px">~</div>
+    <p class="body" style="font-size:clamp(16px,3.2vw,26px);line-height:1.6;color:#8B1A1A;font-style:italic;white-space:nowrap">
+      Three nuns in Rome.<br>
+      One American woman who forgot how to live.<br>
+      One man she&rsquo;s still dying over.<br>
+      A lot of hell to pay.
+    </p>
+    <img src="art/teaser/vespa.png" alt="" style="width:100px;margin-top:28px;opacity:.8">
+  </div>
 </div>
 
-<div class="footer">
-  <div>The Camp Brand Inc. &middot; Brandon Camp &middot; Writer / Director / Producer<span class="footer-sep"> &middot; </span><span class="footer-tail">UTA / TFC</span></div>
+<!-- AUDIENCE -->
+<div class="peach">  <div class="s sw" style="padding-bottom:40px">
+    <div class="g2" style="grid-template-columns:1fr 470px">
+      <div>
+        <div class="script script-head" style="font-size:clamp(36px,6vw,52px)">The Audience</div>
+        <p class="body" style="margin-bottom:16px">Older audience films consistently over-perform...</p>
+        <ul class="stat">
+          <li>It&rsquo;s Complicated ($224m)</li>
+          <li>Something&rsquo;s Gotta Give ($266m)</li>
+          <li>Ticket to Paradise ($172m)</li>
+          <li>Downtown Abbey ($197m)</li>
+          <li>Book Club ($104m / $14m budget)</li>
+          <li>Best Exotic Marigold Hotel ($137m / $10m budget)</li>
+        </ul>
+        <p class="body" style="margin-top:20px">The audience shows up &mdash; when somebody bothers to make something for them.</p>
+        <p class="body" style="margin-top:20px;font-style:italic;color:#8B1A1A;font-weight:500">Hollywood, take note &mdash; audiences over 50 are an ignored opportunity.</p>
+      </div>
+      <div><img src="art/teaser/street.png" alt="" style="width:450px" loading="lazy"></div>
+    </div>
+  </div>
 </div>
+
+<div class="dot">&middot; &middot; &middot;</div>
+
+<!-- CLAIRE: text left, art right -->
+<div class="peach">  <div class="s sw" style="padding-top:40px">
+    <div class="label" style="margin-bottom:16px">Characters</div>
+    <div class="ch-grid" style="grid-template-columns:1fr 320px">
+      <div>
+        <div class="ch-n">Claire</div>
+        <p class="body" style="margin-bottom:16px">A real estate broker renowned for finding buyers for properties nobody else can move. She&rsquo;s brilliant at it, which is the problem &mdash; she&rsquo;s spent her career helping others let go of things while holding onto very little herself.</p>
+        <p class="body" style="margin-bottom:16px">After turning fifty and spectacularly panic-attacking at her college reunion in front of <em>He We Will Not Mention</em>, she desperately needs a change of venue. Truth be told, a convent in Rome feels like the perfect place right now. It&rsquo;s quiet, peaceful, and she&rsquo;s more or less celibate.</p>
+        <p class="body">Along the way, Claire will learn to break bad habits with the help of old gals in <em>habits</em>. Truly embracing <em>La Dolce Vita</em>, she comes to realize that reinvention and love aren&rsquo;t solely reserved for the young. In the end, she stops looking backward at the life she might have lived and instead chooses the one she still can.</p>
+      </div>
+      <div><img src="art/teaser/claire.png" alt="" style="width:300px;margin-top:110px" loading="lazy"></div>
+    </div>
+  </div>
+
+  <!-- MARCUS: art left, text right (justified right) -->
+  <div class="s sw" style="padding-top:0">
+    <div class="label" style="margin-bottom:16px;text-align:right">Characters</div>
+    <div class="ch-grid-flip">
+      <div><img src="art/teaser/marcus.png" alt="" style="margin-top:80px" loading="lazy"></div>
+      <div style="text-align:right">
+        <div class="ch-n">Marcus</div>
+        <p class="body" style="margin-bottom:16px">He was famous once. Can&rsquo;t walk through airports famous. Now he&rsquo;s the guy your mom recognizes. He&rsquo;s in Rome shooting a godawful B movie that will by no means resurrect his career, yet he still galavants around like an A list owner of a tequila brand.</p>
+        <p class="body" style="margin-bottom:16px">Claire ran from him thirty years ago for no less than 1,001 sound reasons and yet her knees <em>still</em> have wobbling issues around him. And now stuck in life&rsquo;s purgatory, Marcus suddenly begins to see Claire anew, and a life he missed out on.</p>
+        <p class="body">He&rsquo;s Hugh Grant in <em>Bridget Jones</em>, Julia Roberts in <em>Notting Hill</em> and Bill Nighy in <em>Love Actually</em> <u>combined</u>. He has a lot of growing up to do...and there are three nuns more than happy to lend a hand.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="inline-q" style="max-width:820px;padding:48px 24px 16px">
+    <p style="font-size:clamp(20px,4vw,34px);line-height:1.4;white-space:nowrap">&ldquo;We&rsquo;re getting older,&rdquo; Marcus said.<br>She pursed her lips and nodded. &ldquo;Then act it.&rdquo;</p>
+    <img src="art/teaser/espresso.png" alt="" style="width:90px;margin-top:24px;opacity:.7">
+  </div>
+</div>
+
+<!-- THE NUNS -->
+<div class="peach">
+  <div class="s sw" style="padding-top:48px">
+    <div class="script script-head" style="font-size:clamp(36px,6vw,52px)">The Nuns</div>
+    <div class="label" style="margin-bottom:28px">Characters</div>
+
+    <div class="ch-grid">
+      <div>
+        <div class="nun-n">Sister Felicity</div>
+        <div class="nun-d">70s. Felicity runs the convent like a five star general &mdash; with total authority and zero patience for sentiment. She&rsquo;s read more books than most professors, swears in Italian, and has a dry wit that could strip paint. Think Maggie Smith in <em>Marigold Hotel</em> crossed with Judi Dench&rsquo;s M &mdash; if M wore a habit and made her own limoncello.</div>
+        <div class="nun-n">Sister Carmela</div>
+        <div class="nun-d">50s. Italian. Agoraphobic and shy about <em>everything</em> except her kitchen. She communicates with food and makes a maritozzo that stops traffic.</div>
+        <div class="nun-n">Sister Th&eacute;r&egrave;se</div>
+        <div class="nun-d">50s. French. <em>Very</em> French. The personable one, the gossiping one, the one who knows things about wine that nuns should not know. Familiar with every shopkeeper in Trastevere by name, by wife&rsquo;s name, by mistress&rsquo; name.</div>
+      </div>
+      <div><img src="art/teaser/nuns.png" alt="The three nuns" style="width:220px;margin-top:80px" loading="lazy"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Theme quote -->
+<div class="peach" style="padding:80px 24px 24px">
+  <div style="position:relative;max-width:780px;margin:0 auto;padding:60px 40px">
+    <img class="deco" src="art/teaser/bougainvillea.png" alt="" style="top:-30px;left:-60px;width:220px;transform:rotate(90deg);opacity:.85">
+    <img class="deco" src="art/teaser/bougainvillea.png" alt="" style="bottom:-30px;right:-140px;width:220px;transform:scaleX(-1);opacity:.85">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,58px);font-style:italic;color:#C4694A;line-height:1.3;text-align:center;position:relative;z-index:1">&ldquo;A person doesn&rsquo;t outgrow<br>the need for a new beginning.&rdquo;</p>
+  </div>
+</div>
+
+<div class="dot">&middot; &middot; &middot;</div>
+
+<!-- BRANDON BIO -->
+<div class="peach">  <div class="s" style="padding:40px 24px">
+    <div class="ch-n" style="margin-bottom:8px">Brandon Camp</div>
+    <p class="body" style="margin-bottom:16px">A writer/director/producer and content creator for large and small screens, Brandon&rsquo;s produced projects include Netflix&rsquo;s international hit, <em>Love &amp; Gelato</em>, a modern retelling of <em>Benji</em>, Universal&rsquo;s <em>Love Happens</em> with Jennifer Aniston, the Kevin Costner film <em>Dragonfly</em>, and the Fox series <em>John Doe</em>, among others.</p>
+    <p class="body" style="margin-bottom:16px">He has created branding campaigns and directed spots for the likes of Ford Motor Company, Liberty Mutual, Lincoln Motor Company, The Ad Council, and Feeding America to name a few.</p>
+    <p class="body" style="margin-bottom:16px">Brandon most recently worked on an eight-episode series for Skydance starring Tim McGraw; and is prepping his next directorial effort for Wildflower Entertainment, <em>Somebody&rsquo;s Daughter</em>, based on the hit country single.</p>
+    <p class="body">He is represented by United Talent Agency and TFC Management.</p>
+    <p class="body" style="margin-top:12px"><a href="https://www.thecampbrand.com" style="color:#C4694A" target="_blank">www.thecampbrand.com</a></p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="peach">  <div class="cta" style="padding:40px 24px">
+    <img src="art/teaser/key.png" alt="" style="width:60px;margin-bottom:24px;opacity:.8">
+    <div><a href="outline.html">Read the Full Story</a></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="foot"><div>The Camp Brand Inc. &middot; Brandon Camp &middot; Writer / Director / Producer &middot; UTA / TFC</div></div>
 
 <script>
-const ACT_COLORS = {1:"#C4694A", 2:"#C4694A", 3:"#C4694A"};
-const ACT_NAMES = {1:"Act One", 2:"Act Two", 3:"Act Three"};
-
-const BEATS = [
-// ACT ONE
-{act:1,icon:"bee.png",art:{src:"beehive.png",side:"right",drop:40},text:"Upstate New York. An old monastery. Monks.\n\nMeet CLAIRE MURPHY, just turning fifty and completely unbothered by it thank you very much. Claire has carved a real-estate niche selling things God used to own – churches, convents, monasteries – and she’s quite good at it. At this particular moment she’s closing a sale that has left a grown abbot weeping with gratitude. Her partner MONICA (50s) is dotting I’s via FaceTime from a yacht.\n\nOne tiny problem. The monks keep bees. Claire was told – repeatedly – not to go near the hives…\n\nShe goes near the hives. Within seconds she’s sprinting across consecrated ground in a pencil skirt, shrieking like a banshee.\n\n§Claire Murphy. Brilliant at her job. A walking disaster at most everything else.§"},
-{act:1,icon:"dress.png",art:{src:"cake.png",side:"left",drop:220},text:"New York. Claire’s lovely SoHo walk-up. She’s packing for the train.\n\nMonica FaceTimes from a hotel bathtub, always wining and dining and whatever-elsing prospective buyers. Claire and Monica run a boutique real estate firm that sells old churches and convents that can no longer be kept up.\n\nMonica wishes Claire a happy fiftieth. Claire ignores that pesky fact, returns to the far more pressing question of what to wear, trying on dress number fifteen for her college reunion this weekend.\n\nBad to worse, Monica drops unpleasant news – the buyout that was going to save their little firm from ever increasing competition has collapsed. Claire sighs, crashes onto the bed in dress number sixteen.\n\nMonica suggests denial and a daiquiri as the best medicine. Put on that little black number, and have some fun for once in your entirely-too-grounded adult life. Fun as in _you-know-who_ at the reunion."},
-{act:1,icon:"champagne.png",art:{src:"champagne.png",side:"right",drop:80},text:"The reunion. Within seconds, Claire sees him across the room.\n\nMARCUS SARDESON (50s). The kind of man who walks in and knees collectively buckle. She ran from him thirty years ago for no less than 1,001 sound reasons, and yet still, her own knees are having issues.\n\nShe sees him. He sees her. Something old and inconvenient sparks instantly. Whispers everywhere, Marcus _is_ a British movie star after all. Or, he _was_ – now whatever aging movie stars call themselves. He saunters over. That smile. That accent. “Murphy! Fifty looks absolutely criminal on you. What say we go find that old stairwell in the library. If memory serves, you _were_ rather loud for a quiet section.”\n\nWhich is when it all hits Claire at once. The stress at the firm. The fiftieth she’s been ignoring. She has a full-steam panic attack. She takes out ice sculptures. She wipes out most of the dessert station. She faceplants in the sushi platter.\n\nAnd she wakes up in a hospital bed with mascara running down her bee stings. §_I’m fine_§ are her first two words."},
-{act:1,icon:"candle.png",text:"There’s a nun sitting next to her hospital bed.\n\nClaire’s emergency contact. The woman who raised her after her mother died. The matriarch instrumental in Claire’s first sale of the convent she once resided in. (Now a golf club...a _very_ sore subject.) This woman is eighty-one and _not_ impressed by Claire’s current state of affairs.\n\n“Monica said He We Do Not Mention was there.”\n\n“We’re NOT mentioning him, Mother Francis.”\n\nMother Francis rolls eyes. She was there when Claire was nineteen and twenty-two and thirty-one, stupid in love with Marcus Sardeson. Every time, she watched it happen and then unhappen.\n\nShe’s been watching Claire unhappen most things in her life ever since him.\n\nClaire says it was just a panic attack. Stress. The firm. The bees. Moving on. Mother Francis knows better. “Claire, you’ll be my age and even more celibate if you’re not careful.”"},
-{act:1,icon:"plane.png",art:{src:"passport.png",side:"right",drop:120},text:"A few days later, Claire and Monica in their small, tidy office. Monica’s stressing about the failed buyout and increasing competition treading into their niche territory.\n\nFortunately, there’re a listing that’s been sitting on her desk for weeks – a convent in Rome. Three nuns who won’t stop calling coupled with a local owner that already has a crappy offer on the table. The nuns want a better one, which is why they keep calling. It’s not an ideal gig, but it pays the bills.\n\n§_“Go to Rome,” Monica says. “Take a few days. Do what you do best.”_§\n\nWhat Monica means is: you look like crap, you just had a public breakdown, and if you stay in this city you’re just going to sit in your apartment and binge Love Island. “Get on a plane, eat some carbs.”\n\nFine, no stranger to ostriching, Claire packs a bag. It should be noted that she does not fly well. Flying involves heights, turbulence, and surrender of control to a stranger she is not allowed to supervise.\n\nSomewhere over the Atlantic, she tries to watch a movie. Scrolls through the options, lands on a familiar face – Marcus Sardeson, young, devastating, in the film that got him nominated. She stabs the button, scrolls. Another Marcus film. And another. The in-flight entertainment system is apparently a Marcus Sardeson retrospective.\n\nTurbulence + wine = air sickness bag."},
-// ACT TWO
-{act:2,icon:"colosseum.png",art:{src:"relic.png",side:"left",drop:40},text:"It hits her the second she steps outside Fiumicino – the beauty of a city that has been seducing people out of their plans for three thousand years.\n\nShe walks into her hotel, jetlagged and cat-dragged-in. A man in what appears to be a tactical vest and holster nearly assaults her, tells her she looks like she could use a martini, a bath, and possibly an accomplice.\n\n_Marcus._\n\nHe’s in Rome, shooting a spy comedy bad enough to make him want to off himself with his toy gun. Fans recognize him in the lobby, especially the older ladies. Claire hates how much she hates them fawning all over him.\n\nShe calls Monica who says, _“Of course I knew, sweetie. You’re welcome.”_"},
-{act:2,icon:"key.png",art:{src:"convent.png",side:"right",drop:260,size:260},text:"§The Convento di Santa Gertrudis.§ Four hundred years old, falling apart, yet still the most beautiful building Claire has ever walked into. Faded frescoes, lemon trees, a rose garden gone magnificently feral. And, an old iron key on a hook in the kitchen that the former Mother Superior insisted would unlock all their troubles. It most certainly _hasn’t_. Nobody knows what the heck it opens.\n\nOur three idiosyncratic nuns –\n\nSISTER FELICITY. British. Late sixties. Former financial magnate. Greets Claire the way a headmistress greets a student she’s already decided to expel.\n\nSISTER THÉRÈSE. French. _Very_ French. Fifties. The personable one, the gossiping one, the one who knows things about wine that nuns should not know. Familiar with every shopkeeper in Trastevere by name, by wife’s name, by mistress’ name.\n\nSISTER CARMELA. Italian. Fifties. Agoraphobic and shy about everything except her kitchen. She communicates with food and makes a maritozzo that stops traffic."},
-{act:2,icon:"ferrari.png",art:{src:"colleseum.png",side:"left",drop:60},text:"And, GIANCARLO. Late twenties, drives a Ferrari, acts _exactly_ like a young Italian driving a Ferrari. Great-grandson of the man who donated the land a hundred years ago, in need of funds for a lifestyle he cannot afford.\n\nHe gives Claire §three days§ to find a better offer than the one he has. If she fails, the nuns are out on the street without a dime and the convent becomes a hotel.\n\nThe nuns don’t want the convent sold; they believe Claire can help them. Claire explains that she sells buildings for a living – she does not save them. The nuns nod politely. They agree entirely. §They do not mean a word of it.§"},
-{act:2,icon:"pastry.png",text:"Claire wakes the next morning to see a long line at the convent gate. Carmela handing out pastry to the homeless through the door. Ever generous, but also ever costly. She tries one herself. Very possibly the best thing she has ever ingested.\n\nShe has six more."},
-{act:2,icon:"camera.png",art:{src:"elements.png",side:"left",drop:140,size:320},text:"Claire hires a local photographer to shoot the convent. He speaks nine words of English, all incorrectly. Marcus, who has decided Claire is the most interesting tourist attraction in Rome, tags along whether he’s welcome or not.\n\nWhat follows is a photo shoot through Trastevere that Claire will later describe as the single worst professional experience of her life.\n\nThe photographer insists on the rooftop. Claire is terrified of heights, but Marcus pushes forth until they end up stranded atop a Roman balcony, arguing – about the past, about who ran from whom, about the fact that he has spent three decades chasing her and she has spent three decades refusing to be caught.\n\nWhile a crowd in the piazza below points, films, narrates in several languages.\n\nThe fire department arrives. Claire is craned down from the roof in a harness, her dress and undies flapping in wind before the entire city. Marcus waves like a man in a victory parade.\n\nBy morning, Claire is on the front page of the Italian tabloids."},
-{act:2,icon:"fire.png",text:"§Day two.§ From back home, Monica has arranged a virtual staging event – a livestreamed walkthrough for potential buyers around the world. Claire briefs the nuns: stay out of frame, stay quiet, stay _dignified_.\n\nSays the woman whose underwear is now an Italian meme.\n\nThe nuns have sabotage in mind. Felicity volunteers on camera every impediment the property has ever suffered. Thérèse warmly walks the buyers through the joys of the neighborhood – the 2 AM drunks, the smell in August, the water pipe she just broke. And Carmela provides a charming baking demonstration that manages to set off every smoke alarm in Trastevere.\n\nBuyers drop out one by one. Monica is furious. Claire confronts the nuns. Felicity meets her eye and shrugs. §“Thou shalt not sell.”§"},
-{act:2,icon:"party.png",art:{src:"wine.png",side:"right",drop:340,size:240},text:"The nuns won the battle but cost themselves the war. Giancarlo, sweating through his linen suit, rings the original lowball buyer and accepts.\n\nThe nuns throw themselves a farewell party and invite the whole neighborhood. Carmela bakes for a hundred amidst tears.\n\nClaire asks Felicity about the key in the kitchen. Felicity half-smiles. “Sister Augusta said it had all the answers. We’ve never found the lock, so it’s actually nothing but questions...”\n\nClaire asks Thérèse how she ended up here. Thérèse goes quiet for the first time since Claire arrived. She says two words – “un uomo cattivo” and changes the subject. _A bad man._ Claire knows from bad men.\n\nThérèse asks Claire if she has children. Claire says she tried for years. And there was a guy, not the right guy…who left after. Thérèse puts her hand on Claire’s, says she’s praying for her empty life. Um, excuse me?\n\nLater, Marcus finds Claire in a quiet corner of the courtyard. He’s a little drunk, a lot undone. His career is in the crapper and Rome is making him feel like a relic. He looks around at the nuns, at the frescoes, at Carmela moving platters from the kitchen, suddenly moved by it all.\n\n“Four hundred years. And next month some bloke’s putting in a rooftop jacuzzi. Meanwhile, I’m playing a spy who fights Russians with a Nerf gun. Nothing that lasts means anything anymore, Clairey. Except you. You’ve lasted, in every fiber of my being. Every divorce, every woman...they’ve all been a stand-in for you.”\n\nHis eyes mean it. Hers begin to well."},
-{act:2,icon:"bed.png",text:"Claire excuses herself, moved by Marcus’ surprising words. She washes her face, looks at herself in a mirror, hearing the voice of Mother Francis from the hospital. What kind of life is she actually building?\n\nShe returns to the courtyard, determined to start anew. §“We are not selling this place,”§ she tells the nuns. “I don’t know how. But we are not selling!”\n\nInvigorated by the moment, she grabs Marcus and whisks him back to their hotel. The elevator takes thirty years to reach his floor, they’re half naked before the doors open. They stumble into his room –\n\nFreezing in place.\n\nThe producer and co-star of his movie is in his bed, having let herself in with her own key. Claire ogles, starstruck. “Oh my God, you were incredible in–” Stopping, remembering the situation. Marcus follows her out the door, saying it’s nothing, a friends-with-benefits thing and honestly, _barely_ friends at that.\n\nLater, she sinks into the floor of her room, cursing the God she momentarily decided to believe in."},
-{act:2,icon:"espresso.png",text:"§Our midpoint morning.§ Claire has slept exactly four minutes, downed three espressos, and is, in other words, _lethal_. And still not selling.\n\nShe finds Giancarlo at his mother’s house – where he still lives, of course. She yells at him, attacking his shortsightedness, his crassness, his overtly philandering ways. _Oops._ “Sorry, that one wasn’t about you.”\n\nNonna chuckles, _Oh yes it was._\n\nClaire pitches him heritage, community, history, a lease renewal, a partnership, anything. He shrugs, _“Cara, no.”_ His nonna calls him a _mammone_ and storms out of the room.\n\nClaire goes to the Roman heritage office. To the municipal government. To the Vatican bank. Every door closes in her face. By nightfall, she’s been told no in three different languages.\n\nShe ignores Marcus’ calls. She eats two pizzas. The nuns console her. She consoles them. Wine consoles them all."},
-{act:2,icon:"horse.png",art:{src:"statue2.png",side:"left",drop:40,size:250},text:"Marcus launches an apology tour. Flowers, notes slipped under her door, a gelato cart with her name on it.\n\nThen, in the piazza, galloping after her on a horse stolen from the shoot, he gives the speech of a lifetime. Tourists applaud. People livestream. Claire asks if he actually wrote that. “The writer may have punched it up.”\n\n“Come now, Claire, we’re getting older,” Marcus says.\n\n§_She purses her lips. “Then start acting like it?”_§\n\nUnimpressed, Claire turns to leave and bumps right into…_Monica_. And she’s not happy."},
-{act:2,icon:"broken-heart.png",text:"Monica is _furious_, in fact. Claire makes the case for not selling – the nuns are extraordinary, Rome is extraordinary, Carmela’s pastry is beyond extraordinary.\n\nMonica bellows, _“Have you lost your mind?? We’re not a preservation society, do you WANT to go out of business??”_\n\nMonica didn’t fly to Rome to save anything but their own hides. Claire doesn’t have a response. Or, by the end of the argument, a best friend anymore."},
-{act:2,icon:"praying-hands.png",text:"Claire packs her bags, resigned to do what she does best in life – _move on_. Of course, there is the matter of the man who just soliloquyed her on horseback, which she’s not thinking about. She is absolutely not thinking about that.\n\nShe encourages the nuns to move on as well. More wine, more maritozzi, more tears. But these three nuns – stubborn, broke, and out of time – still have §faith§. They tell her...to believe."},
-{act:2,icon:"wine.png",text:"The inspection period on the property closes in twenty-four hours, and Monica’s got a Hail Mary up her sleeve.\n\nShe’s flying in a small fleet of investors with a mutual interest in turning the convent into condos. She tells the nuns, bluntly, that under Giancarlo’s current deal they walk away with nothing. But if she can bring in an offer by nightfall, they’ll walk away with actual money in their habits. Even Felicity, the financial brains of the group, admits they should play ball.\n\nMonica throws a lavish dinner in the convent that had better go right…or there’ll be hell to pay.\n\nBut Claire has a secret plan of her own."},
-{act:2,icon:"french.png",text:"Monica’s investors arrive for the extravagant dinner…\n\nAs does an unexpected guest. MITZI (50s). A loud, Jennifer Coolidge-ish American in head-to-toe Gucci with matching French bulldog, PIERRE. Heiress to kermillions. Claire’s last ditch. She once sold Mitzi a cathedral in Connecticut simply because Pierre was fond of the grass.\n\nSo in she walks with…Marcus on her arm, wearing a Victorian frock. Mitzi’s one condition for attending was that Marcus be her date, dressed as her favorite character, Mr. Darcy.\n\nHe grumbles to Claire. “We are officially even.”"},
-{act:2,icon:"circus-tent.png",art:{src:"tomatoes.png",side:"left",drop:140},text:"The dinner unfolds like an Italian circus.\n\nMarcus is forced to perform monologues for Mitzi on request, _numerous_ times. Mitzi swoons, Claire is oddly jealous. Pierre, dressed as Mr. Bingley, pees on everything – a fifteenth-century pew, Giancarlo’s purse, Monica’s Louboutins. Claire and Monica bicker in three-second bursts between courses, an investor argues about commodities with Sister Felicity, Thérèse fights off advances from another, Carmela weeps in the kitchen, Nonna berates Giancarlo for evicting three nuns. It’s a disastro totale - or Italian for shitshow.\n\nThe nuns ask God for a miracle. And it arrives just in time..."},
-{act:2,icon:"storm-cloud.png",text:"A thunderstorm descends upon the convent and a ceiling crack is suddenly exposed – water dripping from an alcove in the attic they didn’t even know existed.\n\nWhat ensues is the least dignified procession in the history of western religion as they all trek up, up, up through tight stone stairwells...making Claire’s stomach spin, spin, spin. Marcus takes her hand, helping her up to a hidden door, soon unlocked by the ever mysterious key."},
-{act:2,icon:"door.png",text:"A small, sealed room, untouched for decades…\n\nInside, the belongings of all the women the convent sheltered over the centuries. Letters, clothes, photographs. And one in particular, of a child. Giancarlo’s great-grandfather – a boy orphaned as an infant, taken in by this order, and raised by nuns…just as Claire had been. The boy grew up, made his fortune and returned to buy the building so the women who saved him wouldn’t lose their home.\n\nNonna cries in the doorway. That was her father.\n\nThe structure gives way under the storm. Water, mud, centuries of plaster cascading into the room. Claire tries to save the documents. Marcus tries to save her. Giancarlo tries to save his shoes –\n\nMitzi screams, Pierre pees, and to hell with it, the nuns laugh and dance in the storm.\n\nBut the investors are soon gone and along with them, the convent’s chances for survival."},
-{act:2,icon:"theater-masks.png",text:"Claire, dress destroyed, covered in mud, realizes it’s over. She plops down in a puddle, finding her voice.\n\n“I lost my mother when I was ten. Nuns took me in, raised me. I have spent every year since making sure I never needed anyone that much again. I sold buildings I dearly loved to people who didn’t give two poops about them. I’ve lived a life of making easy, safe choices.”\n\nMarcus, in his soaked frock, digests every word. Having lived his own life of lies – addicted to fame, blaming everyone but himself for his career, his divorces, his Nerf gun.\n\nClaire continues. “And, I nearly lost my best friend over money...”\n\nMonica looks at the ground, questioning her own choices.\n\n“I guess I’m learning it’s never too late. A person doesn’t outgrow the need for a new beginning. I can’t save the convent, and I’m sorry, but maybe the gal upstairs brought us all together for a reason. Our home doesn’t have to be any one place. It can be each other.”"},
-// ACT THREE
-{act:3,icon:"scroll.png",text:"The next morning, Claire returns to the convent to say goodbye…to find Giancarlo slumped in the convent courtyard. His grandmother standing behind him radiating _don’t-even_ Nonna vibes. He’s reconsidered. He won’t sell. He’ll renew the ninety-nine-year lease.\n\nOne condition. The nuns have to cover their monthly costs. He doesn’t have the means to keep it all afloat.\n\nClaire hugs him, kisses him, smothers him. Nonna winks."},
-{act:3,icon:"sun.png",art:{src:"statue.png",side:"right",drop:100,size:230},text:"Claire frets. Claire thinks. Claire at last sees the light.\n\nLiterally. Refracting off of convent stained glass…a bright, yellow ray finding its way into Carmela’s kitchen...to the line of people outside. The old men, the mothers, the children. The homeless she’s been feeding for years. The maritozzo that stopped her mid-sentence on her first day.\n\nThe answer has been right there in front of them the whole time, rising in the convent oven each and every morning. §Carmela will bake. Felicity will build the financial model. Thérèse will spread the word.§\n\nAnd a washed up actor will help it go viral. Marcus Sardeson selling maritozzi out of a convent window. In a frock.\n\nIt breaks the interweb.\n\nAnd, it breaks Monica’s stalemate. She and Claire, back in the saddle, doing what they do best. _Selling._"},
-{act:3,icon:"clapperboard.png",text:"A knock at Claire’s hotel room. The actress-producer from Marcus’ bed.\n\nShe shows Claire a clip of footage from Marcus’s final day on set. A scene in which his character was saying goodbye to his estranged daughter. §“I kept telling myself you’d be there when I was ready. How terribly convenient of me. That’s not how it works, is it? You don’t get to leave and expect the light to be on when you finally round back. I wasn’t your home, when you most needed one. And I won’t ever forgive myself for it.”§\n\nUnscripted tears in his eyes. And the producer knew that every word was for…Claire.\n\nWho has another panic attack on the spot.\n\n~“He’s already left for the airport,” the producer says. “But, I have an idea?”"},
-{act:3,icon:"helicopter.png",text:"A second-unit stunt helicopter. The pilot is an Italian daredevil who has clearly been waiting his entire life for exactly this moment.\n\nBobbing over the Eternal City, Claire ralphs spectacularly all over herself.\n\nShe lands at the aeroporto looking hell-and-backed and back again. She races to Marcus on the runway, just stepping into his PJ. He sees her. He _smells_ her.\n\nAnd he kisses her like he’s never kissed anyone his entire life."},
-{act:3,icon:"kiss.png",text:"Back at the hotel, but her room this time. They spend the night together. Tender, funny, ridiculous, honest. Thirty years of armor finally shed.\n\nHe wakes up the next morning, expecting a second round with coffee, but...she’s gone. A note on the pillow –\n\n“Come find me if you meant it.”\n\nTurns out Monica got a desperate call in the wee hours from a monastery in Greece. Marcus smiles – sounds like sequel material."},
-{act:3,icon:"flag.png",art:{src:"pastry.png",side:"right",drop:80},text:"The convent.\n\nThe line is out the door. Carmela dusted in flour, handing maritozzi to a queue that stretches long past the piazza. Felicity behind her with an iPad. Thérèse posting to TikTok.\n\nClaire hugs them all goodbye. Carmela presses a warm pastry into her hands and whispers, “Per il viaggio.” For the journey.\n\nClaire leaves in tears, walks out through the gate, breathing in Rome one last time.\n\n§Arrivederci is not goodbye in Italian, it’s..._until we see each other again._§"},
-];
-
-// Build paragraph DOM with inline markers:
-//   §...§ → orange accent span (.accent)
-//   _..._ → italic span (.em)
-// Also auto-wraps ALL-CAPS character names (3+ letters) in orange.
-function buildParagraphContent(text) {
-  text = text.replace(/\b(\p{Lu}{3,}(?:[-' ]\p{Lu}+)*)\b/gu, "§$1§");
-  const frag = document.createDocumentFragment();
-  let italic = false;
-  text.split("§").forEach((part, i) => {
-    const orange = i % 2 === 1;
-    const segs = part.split("_");
-    segs.forEach((sp, j) => {
-      if (sp) {
-        if (orange || italic) {
-          const span = document.createElement("span");
-          if (orange) span.classList.add("accent");
-          if (italic) span.classList.add("em");
-          span.textContent = sp;
-          frag.appendChild(span);
-        } else {
-          frag.appendChild(document.createTextNode(sp));
-        }
-      }
-      if (j < segs.length - 1) italic = !italic;
-    });
-  });
-  return frag;
-}
-
-// Render beats
-const container = document.getElementById("content");
-let lastAct = 0;
-
-const BIG_ICONS = new Set(["plane.png","ferrari.png","espresso.png","horse.png","door.png","helicopter.png"]);
-
-BEATS.forEach((beat, i) => {
-  if (beat.act !== lastAct) {
-    const header = document.createElement("div");
-    header.className = "act-header";
-    header.style.color = ACT_COLORS[beat.act];
-    header.style.marginTop = lastAct === 0 ? "40px" : "64px";
-    header.style.marginBottom = "32px";
-    if (lastAct !== 0) {
-      header.style.paddingTop = "32px";
-      header.style.borderTop = "1px solid " + ACT_COLORS[beat.act] + "33";
-    }
-    header.textContent = ACT_NAMES[beat.act];
-    container.appendChild(header);
-    lastAct = beat.act;
-  }
-
-  const el = document.createElement("div");
-  el.className = "beat";
-  el.dataset.idx = i;
-
-  const iconRow = document.createElement("div");
-  iconRow.className = "beat-icon";
-  const iconImg = document.createElement("img");
-  iconImg.src = "art/icons/" + beat.icon + "?v=3";
-  iconImg.alt = "";
-  iconImg.loading = "lazy";
-  if (BIG_ICONS.has(beat.icon)) {
-    iconImg.style.width = "46px";
-    iconImg.style.height = "46px";
-  }
-  const iconLine = document.createElement("div");
-  iconLine.style.background = ACT_COLORS[beat.act] + "22";
-  iconRow.appendChild(iconImg);
-  iconRow.appendChild(iconLine);
-  el.appendChild(iconRow);
-
-  if (beat.art) {
-    const artImg = document.createElement("img");
-    artImg.className = "beat-art " + beat.art.side;
-    artImg.src = "art/" + beat.art.src;
-    artImg.alt = "";
-    artImg.loading = "lazy";
-    if (beat.art.drop != null) artImg.style.top = beat.art.drop + "px";
-    if (beat.art.size != null) {
-      artImg.style.width = beat.art.size + "px";
-      const offset = (beat.art.size + 40) + "px";
-      if (beat.art.side === "left") artImg.style.left = "-" + offset;
-      else artImg.style.right = "-" + offset;
-    }
-    el.appendChild(artImg);
-  }
-
-  beat.text.split("\n\n").forEach(p => {
-    const pe = document.createElement("p");
-    let pText = p;
-    let forceBody = false;
-    if (pText.startsWith("~")) { pText = pText.substring(1); forceBody = true; }
-    const isQuote = !forceBody && (pText.startsWith("“") || pText.startsWith('"'));
-    if (isQuote) {
-      pe.className = "quote";
-      pe.style.color = "#C4694A";
-    }
-    pe.appendChild(buildParagraphContent(pText));
-    el.appendChild(pe);
-  });
-
-  container.appendChild(el);
-});
-
-// Scroll observer
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("visible");
-  });
-}, { threshold: 0.12, rootMargin: "-5% 0px -15% 0px" });
-
-document.querySelectorAll(".beat").forEach(el => observer.observe(el));
-
-// Hero animations
-document.querySelectorAll(".anim").forEach(el => el.classList.add("show"));
-
-// Scroll hint
-window.addEventListener("scroll", () => {
-  const hint = document.getElementById("scrollHint");
-  if (hint) hint.style.opacity = window.scrollY > 80 ? "0" : "1";
-});
+window.addEventListener("scroll",function(){var h=document.getElementById("sh");if(h)h.style.opacity=window.scrollY>80?"0":"1"});
+document.querySelectorAll(".anim").forEach(function(el){el.classList.add("show")});
 </script>
 </body>
 </html>
